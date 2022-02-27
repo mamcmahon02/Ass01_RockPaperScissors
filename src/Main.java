@@ -3,27 +3,28 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        String PlayerA;
-        String PlayerB;
+        String PlayerA = "";
+        String PlayerB = "";
         boolean Continue = true;
+        boolean validInput = true;
         while (Continue = true) {
-            System.out.println("Player 1 input Rock, Paper, or Scissors:");
-            Scanner input1 = new Scanner(System.in);
-            PlayerA = input1.nextLine();
-            if (PlayerA.equalsIgnoreCase("Rock") || PlayerA.equalsIgnoreCase("Paper") || PlayerA.equalsIgnoreCase("Scissors")) {
-                System.out.println("Player 1 has chosen " + PlayerA);
-            } else {
-                System.out.println("Invalid Input! ");
-                System.exit(0);
+            while (validInput = true) {
+                System.out.println("Player 1 input Rock, Paper, or Scissors:");
+                Scanner input1 = new Scanner(System.in);
+                PlayerA = input1.nextLine();
+                if (PlayerA.equalsIgnoreCase("Rock") || PlayerA.equalsIgnoreCase("Paper") || PlayerA.equalsIgnoreCase("Scissors")) {
+                    System.out.println("Player 1 has chosen " + PlayerA);
+                    break;
+                }
             }
-            System.out.println("Player 2 input Rock, Paper, or Scissors:");
-            Scanner input2 = new Scanner(System.in);
-            PlayerB = input2.nextLine();
-            if (PlayerB.equalsIgnoreCase("Rock") || PlayerB.equalsIgnoreCase("Paper") || PlayerB.equalsIgnoreCase("Scissors")) {
-                System.out.println("Player 2 has chosen " + PlayerB);
-            } else {
-                System.out.println("Invalid Input! ");
-                System.exit(0);
+            while (validInput = true) {
+                System.out.println("Player 2 input Rock, Paper, or Scissors:");
+                Scanner input2 = new Scanner(System.in);
+                PlayerB = input2.nextLine();
+                if (PlayerB.equalsIgnoreCase("Rock") || PlayerB.equalsIgnoreCase("Paper") || PlayerB.equalsIgnoreCase("Scissors")) {
+                    System.out.println("Player 2 has chosen " + PlayerB);
+                    break;
+                }
             }
             if (PlayerA.equalsIgnoreCase("Rock")) {
                 if (PlayerB.equalsIgnoreCase("Paper")) {
